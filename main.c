@@ -164,7 +164,7 @@ void Div(char* first, char* second, int one, int two, char* array, int len, int 
 		{
 			int count_expression_result = one + two;
 			int count = 0;
-			int remains = 0; // остаток 
+			int remains = 0; // Г®Г±ГІГ ГІГ®ГЄ 
 			char* result = NULL;
 			result = (char*)malloc(sizeof(char) * 1);
 			one--; two--;
@@ -282,11 +282,11 @@ void Div(char* first, char* second, int one, int two, char* array, int len, int 
 	NuVse = NULL; free(NuVse);
 }
 
-void Add(char* first, char* second, int one, int two, char *array, int len, int position, char sign) // сумма
+void Add(char* first, char* second, int one, int two, char *array, int len, int position, char sign)
 {
 	int count_expression = one + two;
 	int count = 0;
-	int remains = 0; // остаток 
+	int remains = 0; // Г®Г±ГІГ ГІГ®ГЄ 
 	char *result = NULL;
 	result = (char*)malloc(sizeof(char) * 1);
 	one--; two--;
@@ -352,11 +352,11 @@ void Add(char* first, char* second, int one, int two, char *array, int len, int 
 	result = NULL; free(result);
 }
 
-void Sub(char* first, char* second, int one, int two, char* array, int len, int position, char sign) // разность
+void Sub(char* first, char* second, int one, int two, char* array, int len, int position, char sign)
 {
 	int count_expression = one + two;
 	int count = 0;
-	int remains = 0; // остаток 
+	int remains = 0; // Г®Г±ГІГ ГІГ®ГЄ 
 	char* result = NULL;
 	result = (char*)malloc(sizeof(char) * 1);
 	one--; two--;
@@ -419,7 +419,7 @@ void Sub(char* first, char* second, int one, int two, char* array, int len, int 
 	resultOK = NULL; free(resultOK);
 }
 
-void MaxMin(char* first, char* second, int one, int two, char* array, int len, int position) // Вычисление наибольшего по модулю
+void MaxMin(char* first, char* second, int one, int two, char* array, int len, int position)
 {
 	if (one > two) Sub(first, second, one, two, array, len, position, '+');
 	if (two > one) Sub(second, first, two, one, array, len, position, '-');
@@ -444,7 +444,7 @@ void MaxMin(char* first, char* second, int one, int two, char* array, int len, i
 	}
 }
 
-void Order(char *array, int position, int count) // Порядок выполнения действий в найденной скобке
+void Order(char *array, int position, int count) // ГЏГ®Г°ГїГ¤Г®ГЄ ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї Г¤ГҐГ©Г±ГІГўГЁГ© Гў Г­Г Г©Г¤ГҐГ­Г­Г®Г© Г±ГЄГ®ГЎГЄГҐ
 {
 	int i = position + 1;
 	int number_one = i;
@@ -637,7 +637,7 @@ void Braces(char *fixed, int count)
 	if (fixed[0] != '(') for (i = 0; i < count; i++) printf_s("%c", fixed[i]);
 }
 
-void Input() // Ввод
+void Input()
 {
 	char symbol;
 	char *fixed = NULL;
